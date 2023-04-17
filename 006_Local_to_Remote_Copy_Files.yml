@@ -1,0 +1,11 @@
+---
+- name: copy module demo
+  hosts: all
+  become: false
+  tasks:
+    - name: copy report.sh
+      ansible.builtin.copy:
+        src: report.sh
+        dest: /tmp/report.sh
+        owner: mesut
+        mode: '0777'
