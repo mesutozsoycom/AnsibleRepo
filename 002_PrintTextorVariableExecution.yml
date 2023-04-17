@@ -6,10 +6,10 @@
   tasks:
     - name: debug message
       ansible.builtin.debug:
-        msg: "Bu bir {{ fruit }}"
+        msg: "Bu bir {{ fruit }} mesaji"
         verbosity: 2
     - name: debug message 02
       ansible.builtin.debug:
-        msg: "Merhaba"
+        msg: "Merhaba Ansible"
         verbosity: 2
 
