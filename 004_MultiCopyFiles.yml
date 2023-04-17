@@ -1,0 +1,13 @@
+---
+- name: Multi Copy module
+  hosts: all
+  become: false
+  tasks:
+    - name : copy multiple files
+      ansible.builtin.copy:
+        src: "{{ item }}"
+        dst: "/home/mesut"
+        owner: mesut 
+        mode : '777'
+      with_fileglob:
+        - "/tmp/logs/*.txt"
