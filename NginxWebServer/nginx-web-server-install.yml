@@ -4,9 +4,12 @@
     - name: install nginx on rhel
       become: yes
       yum:
-        name: 
-          - epel-release
-          - nginx
+        name: epel-release
+        state: present
+    - name: install nginx on rhel
+      become: yes
+      yum:
+        name: nginx
         state: present
     - name: copy index.html
       become: yes
