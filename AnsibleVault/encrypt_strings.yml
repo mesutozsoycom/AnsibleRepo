@@ -1,0 +1,3 @@
+#ansible-vault encrypt_string P@ssW0rd! -n ansible_password
+#ansible-vault encrypt_string AdminMesut -n ansible_user
+#ansible-vault encrypt_string dadFeEfbGT4@d1 -n gitlab_access_token

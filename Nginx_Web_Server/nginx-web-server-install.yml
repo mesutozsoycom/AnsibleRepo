@@ -1,5 +1,6 @@
 - name: set up nginx
   hosts: web
+  #gather_facts: no
   tasks:
     - name: install nginx on rhel
       become: yes
@@ -21,3 +22,11 @@
       service:
         name: nginx
         state: started
+    - name: set fact 
+      set_fact:
+        my_fact:
+          - 10
+          - 20
+    - name: debug
+      debug:
+        var: my_fact

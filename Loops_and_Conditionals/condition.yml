@@ -1,0 +1,10 @@
+- name: Loops and Condition
+  hosts: web
+  become: yes
+  tasks: 
+    - name: Print OS Type
+      debug:
+        var: ansible_facts["distribution"]
+    - name: Check Yum Version
+      command: yum --version
+      when: ansible_facts["distribution"] == ""CentOS"

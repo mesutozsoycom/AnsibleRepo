@@ -1,0 +1,7 @@
+[web]
+192.168.1.10 ansible_user=mesutozsoy ansible_password=Passw0rd123!
+192.168.1.20 ansible_user=mesutozsoy ansible_password=Passw0rd123!
+
+[web:vars]
+cfg_path=/etc/app
+cfg_file_name=app.cfg

@@ -1,0 +1,10 @@
+#ansible-vault encrypt site.yml
+#Enter Your Password
+#You will see your files encrypted.
+
+#ansible-vault decrypt site.yml
+#Enter Your Password
+#You will see your files decrypted.
+
+
+#ansible-playbook -i hosts site.yml --ask-vault

@@ -1,0 +1,18 @@
+- name: Copy File with Jinja2 Templates
+  hosts: web
+  gather_facts: no
+  tasks:
+    - name: Check Directory on Remote Host
+      become: yes
+      file: 
+        path: "{{ cfg_path }}"
+        state: Directory
+        owner: mesut
+    - name: Copy cfg file local to Remote Host
+      template:
+      #copy:
+        src: "{{ cfg_file_name }}"
+        dst: "{{ cfg_path }}/{{ cfg_file_name }}"
+    - name: print invertory name
+      debug:
+        var: inventory_hostname

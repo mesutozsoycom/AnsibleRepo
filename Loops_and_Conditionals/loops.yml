@@ -1,0 +1,14 @@
+- name: Loops Example
+  hosts: web
+  become: yes
+  tasks: 
+    - name: create local users
+      user:
+        name: "{{ username }}"
+      loop:
+        - mesut1
+        - mesut2
+        - mesut3
+        - mesut4
+      loop_control:
+        loop_var: username
